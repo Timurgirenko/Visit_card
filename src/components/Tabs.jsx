@@ -1,11 +1,12 @@
 import '../styles/tabs.css'
+import { IconUser, IconCompass, IconBox, IconMail } from './Icon.jsx'
 
 const TABS = [
   { key: 'code', label: 'Code', icon: <span className="dot" /> },
-  { key: 'about', label: '👤 About' },
-  { key: 'experience', label: '🧭 Experience' },
-  { key: 'projects', label: '📦 Projects' },
-  { key: 'contact', label: '✉️ Contact' },
+  { key: 'about', label: 'About', icon: <IconUser size={14} /> },
+  { key: 'experience', label: 'Experience', icon: <IconCompass size={14} /> },
+  { key: 'projects', label: 'Projects', icon: <IconBox size={14} /> },
+  { key: 'contact', label: 'Contact', icon: <IconMail size={14} /> },
 ]
 
 export default function Tabs({ activeTab, onChange }) {

@@ -1,4 +1,5 @@
 import '../styles/topbar.css'
+import { IconSearch, IconBell, IconGitFork } from './Icon.jsx'
 
 export default function TopBar() {
   return (
@@ -9,10 +10,12 @@ export default function TopBar() {
           <b>timurgirenko</b>
           <span className="slash">/</span>timurgirenko
         </div>
-        <div className="search">🔍 Type to search</div>
+        <div className="search">
+          <IconSearch size={14} /> Type to search
+        </div>
         <div className="topbar-icons">
-          <span>🔔</span>
-          <span>⑂</span>
+          <IconBell size={16} />
+          <IconGitFork size={16} />
         </div>
       </div>
     </div>

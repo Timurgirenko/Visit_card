@@ -1,25 +1,30 @@
 import '../styles/repoHeader.css'
+import { IconFolder, IconStar, IconGitFork, IconEye, IconTag, IconActivity, IconGlobe } from './Icon.jsx'
 
 export default function RepoHeader() {
   return (
     <div className="repo-header">
       <div className="wrap">
         <div className="repo-title-row">
-          <span style={{ fontSize: 20 }}>📁</span>
+          <IconFolder size={19} className="title-icon" />
           <h1>
             <b>timurgirenko</b> / timurgirenko <span className="badge">Public</span>
           </h1>
         </div>
-        <div className="repo-actions">
-          <span className="btn">📌 Pin</span>
-          <span className="btn">
-            👁 Watch <span className="count">1</span>
-          </span>
-          <span className="btn">
-            ⑂ Fork <span className="count">0</span>
-          </span>
-          <span className="btn primary">⭐ Открыт для предложений</span>
+
+        <div className="repo-stats">
+          <span><IconStar size={14} /> 0 stars</span>
+          <span><IconGitFork size={14} /> 0 forks</span>
+          <span><IconEye size={14} /> 0 watching</span>
+          <span><IconGitFork size={14} /> 1 branch</span>
+          <span><IconTag size={14} /> 0 tags</span>
+          <span><IconActivity size={14} /> Activity</span>
+          <span><IconGlobe size={14} /> Public repository</span>
         </div>
+
+        <span className="open-badge">
+          <IconStar size={13} /> Открыт для предложений
+        </span>
       </div>
     </div>
   )

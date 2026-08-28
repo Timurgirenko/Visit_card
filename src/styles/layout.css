@@ -3,19 +3,38 @@
   margin: 0 auto;
   padding: 0 16px;
 }
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 12px;
+  }
+}
 
 .main {
   padding: 20px 0 60px;
+}
+@media (max-width: 480px) {
+  .main {
+    padding: 14px 0 40px;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 22px;
+  min-width: 0;
+}
+.grid > div {
+  min-width: 0;
 }
 @media (min-width: 900px) {
   .grid {
     grid-template-columns: 2.4fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    gap: 16px;
   }
 }
 

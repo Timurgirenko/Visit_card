@@ -17,6 +17,26 @@
     padding: 20px 16px;
   }
 }
+@media (max-width: 480px) {
+  .readme-body {
+    padding: 16px 14px;
+  }
+  .readme-body h1 {
+    font-size: 21px;
+  }
+  .readme-role {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  .readme-body h2 {
+    font-size: 16px;
+    margin: 22px 0 10px;
+  }
+  .term {
+    padding: 12px 14px;
+    font-size: 11.5px;
+  }
+}
 
 .readme-body h1 {
   font-size: 26px;
@@ -193,6 +213,17 @@
   border-radius: 50%;
   display: inline-block;
 }
+@media (max-width: 480px) {
+  .timeline {
+    padding-left: 14px;
+  }
+  .timeline .item::before {
+    left: -19px;
+  }
+  .repo-card {
+    padding: 13px;
+  }
+}
 
 .contact-row {
   display: flex;
@@ -216,4 +247,13 @@
   background: var(--bg3);
   border-color: var(--border);
   color: var(--text);
+}
+@media (max-width: 480px) {
+  .contact-row {
+    flex-direction: column;
+  }
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }

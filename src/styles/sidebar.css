@@ -25,8 +25,11 @@
 }
 .side-list li .ic {
   width: 16px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
+  color: var(--muted);
 }
 .lang-bar {
   height: 8px;
@@ -63,6 +66,23 @@
   font-weight: 600;
   font-size: 13px;
   text-align: center;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
   cursor: pointer;
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  display: inline-block;
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .side-box {
+    padding: 13px;
+    margin-bottom: 12px;
+  }
 }

@@ -1,4 +1,5 @@
 import '../styles/sidebar.css'
+import { IconMapPin, IconGraduationCap, IconMail } from './Icon.jsx'
 
 export default function Sidebar({ activeTab, onNavigate }) {
   const showAbout = ['code', 'about'].includes(activeTab)
@@ -10,9 +11,9 @@ export default function Sidebar({ activeTab, onNavigate }) {
         <h3>About</h3>
         <p>Frontend-разработчик (Vue/Nuxt) из Воронежа. Студент ВГУ. Открыт к найму и фрилансу.</p>
         <ul className="side-list" style={{ marginTop: 12 }}>
-          <li><span className="ic">📍</span> Воронеж, Россия</li>
-          <li><span className="ic">🎓</span> ВГУ, матфакультет</li>
-          <li><span className="ic">🟢</span> Доступен для проектов</li>
+          <li><span className="ic"><IconMapPin size={14} /></span> Воронеж, Россия</li>
+          <li><span className="ic"><IconGraduationCap size={14} /></span> ВГУ, матфакультет</li>
+          <li><span className="ic"><span className="status-dot" /></span> Доступен для проектов</li>
         </ul>
       </div>
 
@@ -44,7 +45,7 @@ export default function Sidebar({ activeTab, onNavigate }) {
             onNavigate('contact')
           }}
         >
-          💌 Написать Тимуру
+          <IconMail size={14} /> Написать Тимуру
         </a>
       </div>
     </div>
