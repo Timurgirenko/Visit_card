@@ -1,0 +1,84 @@
+.graph-sub {
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.graph-wrap {
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+.graph {
+  display: flex;
+  gap: 3px;
+  width: max-content;
+}
+.week-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.week-col i {
+  width: 11px;
+  height: 11px;
+  border-radius: 2px;
+  display: block;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.1s ease, outline 0.1s ease;
+}
+.week-col i:hover {
+  transform: scale(1.35);
+  outline: 1px solid #fff;
+  outline-offset: 0;
+}
+.week-col i.today {
+  outline: 1.5px solid #f78166;
+  outline-offset: 1px;
+}
+.tooltip {
+  position: fixed;
+  background: #010409;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 50;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+  transform: translate(-50%, -130%);
+}
+.tooltip.show {
+  opacity: 1;
+}
+.graph-labels {
+  display: flex;
+  gap: 3px;
+  margin-top: 6px;
+  width: max-content;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+.graph-labels span {
+  width: 11px;
+  flex-shrink: 0;
+  position: relative;
+  white-space: nowrap;
+}
+.graph-legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--muted);
+}
+.graph-legend i {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  display: inline-block;
+}
