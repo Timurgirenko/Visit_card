@@ -1,15 +1,12 @@
+import { useState } from 'react'
 import '../styles/fileExplorer.css'
-import { IconFileText, IconFolder } from './Icon.jsx'
-
-const FILES = [
-  { icon: IconFileText, name: 'about.md', desc: 'Кто я и чем занимаюсь', time: 'сейчас', tab: 'about' },
-  { icon: IconFileText, name: 'experience.md', desc: 'Опыт и учёба', time: 'на этой неделе', tab: 'experience' },
-  { icon: IconFolder, name: 'projects/', desc: 'Закреплённые репозитории', time: 'на этой неделе', tab: 'projects' },
-  { icon: IconFileText, name: 'skills.json', desc: 'Стек: Vue, Nuxt, JS/TS', time: 'на этой неделе', tab: 'about' },
-  { icon: IconFileText, name: 'contact.txt', desc: 'Telegram, email, резюме', time: 'на этой неделе', tab: 'contact' },
-]
+import { IconClock } from './Icon.jsx'
+import { FILES } from '../data/files.js'
+import CommitsModal from './CommitsModal.jsx'
 
 export default function FileExplorer({ onNavigate }) {
+  const [commitsOpen, setCommitsOpen] = useState(false)
+
   return (
     <div className="box" style={{ marginBottom: 20 }}>
       <div className="commit-bar">
@@ -17,7 +14,9 @@ export default function FileExplorer({ onNavigate }) {
         <span className="who">Timurgirenko</span>
         <span className="msg">Обновил профиль — открыт к предложениям</span>
         <div className="right">
-          <span>сегодня</span>
+          <button type="button" className="commit-count" onClick={() => setCommitsOpen(true)}>
+            <IconClock size={13} /> 2 Commits
+          </button>
         </div>
       </div>
 
@@ -40,6 +39,8 @@ export default function FileExplorer({ onNavigate }) {
           </a>
         )
       })}
+
+      {commitsOpen && <CommitsModal onClose={() => setCommitsOpen(false)} />}
     </div>
   )
 }
