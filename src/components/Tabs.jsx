@@ -1,8 +1,8 @@
 import '../styles/tabs.css'
-import { IconUser, IconCompass, IconBox, IconMail } from './Icon.jsx'
+import { IconCode, IconUser, IconCompass, IconBox, IconMail } from './Icon.jsx'
 
 const TABS = [
-  { key: 'code', label: 'Code', icon: <span className="dot" /> },
+  { key: 'code', label: 'Code', icon: <IconCode size={14} /> },
   { key: 'about', label: 'About', icon: <IconUser size={14} /> },
   { key: 'experience', label: 'Experience', icon: <IconCompass size={14} /> },
   { key: 'projects', label: 'Projects', icon: <IconBox size={14} /> },

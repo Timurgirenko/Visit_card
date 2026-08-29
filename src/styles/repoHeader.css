@@ -12,14 +12,24 @@
   color: var(--muted);
   flex-shrink: 0;
 }
+.repo-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--vue), #2c9e6b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #04150c;
+  flex-shrink: 0;
+}
 .repo-title-row h1 {
   font-size: 22px;
-  font-weight: 400;
-  color: var(--muted);
-}
-.repo-title-row h1 b {
-  color: var(--link);
   font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .badge {
   font-size: 11px;
@@ -29,21 +39,47 @@
   padding: 1px 8px;
   font-weight: 500;
 }
-.repo-stats {
+
+.repo-actions {
   display: flex;
+  gap: 8px;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 5px 16px;
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 13px;
+  margin-left: auto;
 }
-.repo-stats span {
+.btn {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 500;
   display: flex;
   align-items: center;
-  gap: 5px;
-  white-space: nowrap;
+  gap: 6px;
+  cursor: default;
 }
+.btn .count {
+  background: var(--bg);
+  border-radius: 999px;
+  padding: 0 6px;
+  margin-left: 2px;
+  font-size: 11px;
+}
+.btn.tb-btn-clickable {
+  cursor: pointer;
+  font-family: inherit;
+}
+.btn.tb-btn-clickable:hover {
+  background: #2a3038;
+}
+.pin-icon {
+  color: var(--muted);
+}
+.pin-active {
+  color: #fff;
+}
+
 .open-badge {
   display: inline-flex;
   align-items: center;
@@ -56,6 +92,7 @@
   font-weight: 600;
   margin-top: 14px;
 }
+
 @media (max-width: 480px) {
   .repo-header {
     padding: 16px 0;
@@ -64,10 +101,13 @@
     font-size: 17px;
     line-height: 1.4;
   }
-  .repo-stats {
-    font-size: 12px;
-    gap: 4px 12px;
-    margin-top: 10px;
+  .repo-actions {
+    gap: 6px;
+    margin-left: 0;
+  }
+  .btn {
+    font-size: 11px;
+    padding: 6px 10px;
   }
   .open-badge {
     font-size: 11px;

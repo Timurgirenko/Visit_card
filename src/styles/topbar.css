@@ -1,6 +1,5 @@
 .topbar {
   background: #010409;
-  border-bottom: 1px solid var(--border);
   padding: 10px 0;
 }
 .topbar .wrap {

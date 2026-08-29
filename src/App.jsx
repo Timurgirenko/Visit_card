@@ -2,6 +2,7 @@ import { useState } from 'react'
 import TopBar from './components/TopBar.jsx'
 import RepoHeader from './components/RepoHeader.jsx'
 import Tabs from './components/Tabs.jsx'
+import Toolbar from './components/Toolbar.jsx'
 import FileExplorer from './components/FileExplorer.jsx'
 import Readme from './components/Readme.jsx'
 import Sidebar from './components/Sidebar.jsx'
@@ -14,14 +15,19 @@ export default function App() {
   return (
     <>
       <TopBar />
-      <RepoHeader />
       <Tabs activeTab={activeTab} onChange={setActiveTab} />
+      <RepoHeader />
 
       <div className="main">
         <div className="wrap">
           <div className="grid">
             <div>
-              <FileExplorer onNavigate={setActiveTab} />
+              {activeTab === 'code' && (
+                <>
+                  <Toolbar />
+                  <FileExplorer onNavigate={setActiveTab} />
+                </>
+              )}
               <Readme activeTab={activeTab} />
             </div>
             <Sidebar activeTab={activeTab} onNavigate={setActiveTab} />

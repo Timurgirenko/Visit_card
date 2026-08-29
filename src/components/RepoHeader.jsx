@@ -1,25 +1,44 @@
+import { useState } from 'react'
 import '../styles/repoHeader.css'
-import { IconFolder, IconStar, IconGitFork, IconEye, IconTag, IconActivity, IconGlobe } from './Icon.jsx'
+import { IconFolder, IconPin, IconEye, IconGitFork, IconStar } from './Icon.jsx'
 
 export default function RepoHeader() {
+  const [pinned, setPinned] = useState(false)
+
   return (
     <div className="repo-header">
       <div className="wrap">
         <div className="repo-title-row">
-          <IconFolder size={19} className="title-icon" />
+          <span className="repo-avatar">
+            <IconFolder size={15} />
+          </span>
           <h1>
-            <b>timurgirenko</b> / timurgirenko <span className="badge">Public</span>
+            timurgirenko <span className="badge">Public</span>
           </h1>
-        </div>
 
-        <div className="repo-stats">
-          <span><IconStar size={14} /> 0 stars</span>
-          <span><IconGitFork size={14} /> 0 forks</span>
-          <span><IconEye size={14} /> 0 watching</span>
-          <span><IconGitFork size={14} /> 1 branch</span>
-          <span><IconTag size={14} /> 0 tags</span>
-          <span><IconActivity size={14} /> Activity</span>
-          <span><IconGlobe size={14} /> Public repository</span>
+          <div className="repo-actions">
+            <button
+              type="button"
+              className="btn tb-btn-clickable"
+              onClick={() => setPinned((v) => !v)}
+              aria-pressed={pinned}
+            >
+              <IconPin
+                size={13}
+                className={pinned ? 'pin-active' : 'pin-icon'}
+                fill={pinned ? 'currentColor' : 'none'}
+              /> Pin
+            </button>
+            <span className="btn">
+              <IconEye size={13} /> Watch <span className="count">0</span>
+            </span>
+            <span className="btn">
+              <IconGitFork size={13} /> Fork <span className="count">0</span>
+            </span>
+            <span className="btn">
+              <IconStar size={13} /> Star <span className="count">0</span>
+            </span>
+          </div>
         </div>
 
         <span className="open-badge">

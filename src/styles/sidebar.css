@@ -14,6 +14,19 @@
   color: var(--muted);
   font-size: 13px;
 }
+.about-desc {
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.side-divider {
+  border-top: 1px solid var(--border);
+  margin: 12px 0;
+}
+.side-muted {
+  color: var(--muted);
+  font-size: 13px;
+}
 .side-list {
   list-style: none;
 }
@@ -22,6 +35,21 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 9px;
+}
+.side-list li:last-child {
+  margin-bottom: 0;
+}
+.side-list a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--link);
+}
+.side-list a:hover {
+  text-decoration: underline;
+}
+.stats-list li {
+  margin-bottom: 7px;
 }
 .side-list li .ic {
   width: 16px;

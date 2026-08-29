@@ -1,5 +1,14 @@
 import '../styles/sidebar.css'
-import { IconMapPin, IconGraduationCap, IconMail } from './Icon.jsx'
+import {
+  IconMapPin,
+  IconGraduationCap,
+  IconMail,
+  IconBook,
+  IconActivity,
+  IconStar,
+  IconEye,
+  IconGitFork,
+} from './Icon.jsx'
 
 export default function Sidebar({ activeTab, onNavigate }) {
   const showAbout = ['code', 'about'].includes(activeTab)
@@ -9,8 +18,27 @@ export default function Sidebar({ activeTab, onNavigate }) {
     <div>
       <div className={`side-box panel ${showAbout ? 'show' : ''}`}>
         <h3>About</h3>
-        <p>Frontend-разработчик (Vue/Nuxt) из Воронежа. Студент ВГУ. Открыт к найму и фрилансу.</p>
-        <ul className="side-list" style={{ marginTop: 12 }}>
+        <p className="about-desc">Frontend-разработчик (Vue/Nuxt) из Воронежа. Студент ВГУ. Открыт к найму и фрилансу.</p>
+
+        <ul className="side-list stats-list">
+          <li>
+            <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('code') }}>
+              <span className="ic"><IconBook size={14} /></span> Readme
+            </a>
+          </li>
+          <li>
+            <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('code') }}>
+              <span className="ic"><IconActivity size={14} /></span> Activity
+            </a>
+          </li>
+          <li><span className="ic"><IconStar size={14} /></span> 0 stars</li>
+          <li><span className="ic"><IconEye size={14} /></span> 0 watching</li>
+          <li><span className="ic"><IconGitFork size={14} /></span> 0 forks</li>
+        </ul>
+
+        <div className="side-divider" />
+
+        <ul className="side-list">
           <li><span className="ic"><IconMapPin size={14} /></span> Воронеж, Россия</li>
           <li><span className="ic"><IconGraduationCap size={14} /></span> ВГУ, матфакультет</li>
           <li><span className="ic"><span className="status-dot" /></span> Доступен для проектов</li>
@@ -33,6 +61,16 @@ export default function Sidebar({ activeTab, onNavigate }) {
           <span><i style={{ background: 'var(--css)' }} />CSS 10%</span>
           <span><i style={{ background: 'var(--html)' }} />HTML 5%</span>
         </div>
+      </div>
+
+      <div className="side-box">
+        <h3>Releases</h3>
+        <p className="side-muted">No releases published</p>
+      </div>
+
+      <div className="side-box">
+        <h3>Packages</h3>
+        <p className="side-muted">No packages published</p>
       </div>
 
       <div className="side-box">

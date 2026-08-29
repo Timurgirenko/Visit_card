@@ -156,3 +156,106 @@ export const IconCode = (p) => (
     <polyline points="15,7 20,12 15,17" />
   </Base>
 )
+
+export const IconChevronDown = (p) => (
+  <Base {...p}>
+    <polyline points="6,9 12,15 18,9" />
+  </Base>
+)
+
+export const IconPlus = (p) => (
+  <Base {...p}>
+    <line x1="12" y1="5" x2="12" y2="19" />
+    <line x1="5" y1="12" x2="19" y2="12" />
+  </Base>
+)
+
+export const IconUpload = (p) => (
+  <Base {...p}>
+    <path d="M12 16V4" />
+    <polyline points="7,9 12,4 17,9" />
+    <path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3" />
+  </Base>
+)
+
+export const IconMenu = (p) => (
+  <Base {...p}>
+    <line x1="3" y1="6" x2="21" y2="6" />
+    <line x1="3" y1="12" x2="21" y2="12" />
+    <line x1="3" y1="18" x2="21" y2="18" />
+  </Base>
+)
+
+export const IconSettings = (p) => (
+  <Base {...p}>
+    <circle cx="12" cy="12" r="3" />
+    <line x1="12" y1="2" x2="12" y2="5" />
+    <line x1="12" y1="19" x2="12" y2="22" />
+    <line x1="2" y1="12" x2="5" y2="12" />
+    <line x1="19" y1="12" x2="22" y2="12" />
+    <line x1="4.9" y1="4.9" x2="7" y2="7" />
+    <line x1="17" y1="17" x2="19.1" y2="19.1" />
+    <line x1="4.9" y1="19.1" x2="7" y2="17" />
+    <line x1="17" y1="7" x2="19.1" y2="4.9" />
+  </Base>
+)
+
+export const IconPin = ({ filled, ...p }) => (
+  <Base {...p}>
+    <g transform="rotate(-45 12 12)">
+      <line x1="12" y1="9" x2="12" y2="21" />
+      <circle cx="12" cy="6" r="2.6" fill={filled ? 'currentColor' : 'none'} />
+    </g>
+  </Base>
+)
+
+export const IconCopy = (p) => (
+  <Base {...p}>
+    <rect x="9" y="9" width="12" height="12" rx="2" />
+    <path d="M5 15V5a2 2 0 0 1 2-2h10" />
+  </Base>
+)
+
+export const IconHelpCircle = (p) => (
+  <Base {...p}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M9.5 9.2a2.5 2.5 0 1 1 3.4 2.3c-.7.3-1.1.9-1.1 1.6v.4" />
+    <circle cx="12" cy="17" r="0.6" fill="currentColor" stroke="none" />
+  </Base>
+)
+
+export const IconSparkle = (p) => (
+  <Base {...p}>
+    <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z" />
+  </Base>
+)
+
+export const IconDesktop = (p) => (
+  <Base {...p}>
+    <rect x="3" y="4" width="18" height="12" rx="2" />
+    <line x1="8" y1="20" x2="16" y2="20" />
+    <line x1="12" y1="16" x2="12" y2="20" />
+  </Base>
+)
+
+export const IconDownload = (p) => (
+  <Base {...p}>
+    <path d="M12 3v12" />
+    <polyline points="7,10 12,15 17,10" />
+    <path d="M4 19h16" />
+  </Base>
+)
+
+export const IconMoreHorizontal = (p) => (
+  <Base {...p}>
+    <circle cx="5" cy="12" r="1.3" fill="currentColor" stroke="none" />
+    <circle cx="12" cy="12" r="1.3" fill="currentColor" stroke="none" />
+    <circle cx="19" cy="12" r="1.3" fill="currentColor" stroke="none" />
+  </Base>
+)
+
+export const IconCloud = (p) => (
+  <Base {...p}>
+    <path d="M7 18a4 4 0 0 1-.5-7.97A5.5 5.5 0 0 1 17 9.5 4 4 0 0 1 17 18H7z" />
+  </Base>
+)
